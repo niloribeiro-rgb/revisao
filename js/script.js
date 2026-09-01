@@ -9,7 +9,7 @@ function adicionarVideo() {
 
     let videosLinks = ["https://youtu.be/GwaRztMaoY0?si=C3WEYIpv2hOUM_7P",
         "https://youtu.be/gcgKUcJKxIs?si=XyT3XyiTC4I76PNA",
-        "https://youtu.be/qegp2LHzGfU?si=n0W-eQvzhl4G4Wlw"]
+        "https://youtu.be/LFTE4W--Htk?si=o6jD20hAsNkFTuyy"]
 
     // let videoCode = ["GwaRztMaoY0?"]
     let videoCode = []
