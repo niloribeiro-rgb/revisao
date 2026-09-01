@@ -1,0 +1,68 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+   /* background-color: blueviolet; */
+   padding: 0 30px;
+   height: 10vh;
+}
+.logo{
+    width: 150px;
+    height: 10vh;
+}
+.logo img{
+    height: 100%;
+}
+.link{
+    display: flex;
+   line-height: 10vh;
+    gap: 10px;
+    height: 10vh;
+   
+
+}
+.link a{
+    display: inline-block;
+    
+    text-decoration: none;
+    color: black;
+}
+.link a:hover{
+    background-color: azure;
+}
+.botao{
+    height: 10vh;
+    width: 150px;
+    display: flex;
+    align-items: center; 
+    
+}
+.botao button{
+   padding: 0 15px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+.botao button:hover{
+    background-color: rgb(41, 41, 41);
+}
+.banner{
+    height: 90vh;
+    background-size: cover;
+    background-position: center 40%;;
+}
+.cardVideos{
+    height: 100px;
+}
+
+iframe{
+    /* width:auto;
+    height:560px; */
+}
