@@ -1,40 +1,184 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header{
+body {
+    background: #1f1f1f;
+}
+
+header {
     display: flex;
     justify-content: space-between;
-   /* background-color: blueviolet; */
-   padding: 0 30px;
-   height: 10vh;
+    /* background-color: blueviolet; */
+    padding: 0 30px;
+    height: 10vh;
 }
-.logo{
+
+.logo {
     width: 150px;
     height: 10vh;
 }
-.logo img{
+
+.logo img {
     height: 100%;
 }
-.link{
+
+.link {
     display: flex;
-   line-height: 10vh;
+    line-height: 10vh;
     gap: 10px;
     height: 10vh;
-   
+
 
 }
-.link a{
+
+.link a {
     display: inline-block;
-    
+
     text-decoration: none;
+    color: white;
+}
+
+.link a:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.botao {
+    position: relative;
+    height: 10vh;
+    width: 150px;
+    display: flex;
+    align-items: center;
+
+}
+
+.botao button {
+    padding: 0 15px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: none;
+    border-radius: 20px;
     color: black;
 }
-.link a:hover{
-    background-color: azure;
+
+.botao button:hover {
+    background-color: rgb(206, 206, 206);
 }
+
+.popUpContainer {
+    position: absolute;
+    right: 0;
+    width: 480px;
+    height: 500px;
+    transform: translate(0%, 0%) scale(20%);
+    opacity: 0;
+    /* display: none; */
+    transition: 0.5s ease-in-out;
+}
+
+.activePopUp {
+    /* display: block; */
+    opacity: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(100%);
+    background-color: rgb(39, 160, 160);
+}
+
+.banner {
+    height: 50vh;
+    background-size: cover;
+    animation-name: anime;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+    0% {
+        background-position: center 0%;
+        transition: ease;
+    }
+
+    10% {
+        background-position: center 20%;
+        transition: ease;
+    }
+
+    20% {
+        background-position: center 40%;
+        transition: ease;
+    }
+
+    30% {
+        background-position: center 60%;
+        transition: ease;
+    }
+
+    40% {
+        background-position: center 80%;
+        transition: ease;
+    }
+
+    50% {
+        background-position: center 100%;
+        transition: ease;
+    }
+
+    60% {
+        background-position: center 80%;
+        transition: ease;
+    }
+
+    70% {
+        background-position: center 60%;
+        transition: ease;
+    }
+
+    80% {
+        background-position: center 40%;
+        transition: ease;
+    }
+
+    90% {
+        background-position: center 20%;
+        transition: ease;
+    }
+
+    100% {
+        background-position: center 0%;
+        transition: ease;
+    }
+
+}
+
+.videosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 480px);
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60vh;
+}
+
+.cardVideo {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    background-color: #2f2f2f;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+iframe {
+    border: none;
+
+    /* width:auto;
+    height:560px; */
+}}
 .botao{
     height: 10vh;
     width: 150px;
