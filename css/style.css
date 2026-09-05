@@ -4,21 +4,28 @@
     padding: 0;
 }
 
-body {
-    background: #1f1f1f;
+:root {
+    --headerHeight: 15vh;
 }
+
+body {
+    background: #0c0c0c;
+}
+
+/* header */
 
 header {
     display: flex;
     justify-content: space-between;
     /* background-color: blueviolet; */
     padding: 0 30px;
-    height: 10vh;
+    width: auto;
+    height: var(--headerHeight);
 }
 
 .logo {
     width: 150px;
-    height: 10vh;
+    height: var(--headerHeight);
 }
 
 .logo img {
@@ -27,9 +34,9 @@ header {
 
 .link {
     display: flex;
-    line-height: 10vh;
+    line-height: var(--headerHeight);
     gap: 10px;
-    height: 10vh;
+
 
 
 }
@@ -46,8 +53,7 @@ header {
 }
 
 .botao {
-    position: relative;
-    height: 10vh;
+    height: var(--headerHeight);
     width: 150px;
     display: flex;
     align-items: center;
@@ -56,7 +62,7 @@ header {
 
 .botao button {
     padding: 0 15px;
-    height: 40px;
+    height: 50%;
     background-color: rgb(255, 255, 255);
     color: white;
     border: none;
@@ -69,27 +75,59 @@ header {
 }
 
 .popUpContainer {
-    position: absolute;
-    right: 0;
+    position: fixed;
     width: 480px;
     height: 500px;
-    transform: translate(0%, 0%) scale(20%);
+    top: 0;
+    left: 100%;
+    transform: translate(0, 0) scale(50%);
     opacity: 0;
+    visibility: hidden;
     /* display: none; */
     transition: 0.5s ease-in-out;
+    background-color: #2f2f2f;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .activePopUp {
     /* display: block; */
-    opacity: 100;
+    visibility: visible;
+    opacity: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(100%);
-    background-color: rgb(39, 160, 160);
+
 }
 
+.popUpTop {
+    display: flex;
+    justify-content: end;
+    padding: 15px;
+    /* background-color: rgb(53, 53, 53);  */
+}
+
+.popUpTop button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #101010;
+    height: 40px;
+    width: 40px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.popUpTop button:hover {
+    background-color: #1b1b1b;
+}
+
+/* main */
+
 .banner {
-    height: 50vh;
+    width: auto;
+    height: 70vh;
     background-size: cover;
     animation-name: anime;
     animation-duration: 60s;
@@ -155,22 +193,74 @@ header {
 }
 
 .videosContainer {
+    width: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 480px);
+    grid-template-columns: repeat(auto-fit, 30vw);
     padding: 30px;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: 60vh;
+
+}
+
+/* isso ta relacionado com a funcao adicionarVideo em relacao ao tamanho */
+@media(max-width:480px) {
+    header {
+        padding: 0 10px;
+    }
+
+    .videosContainer {
+        grid-template-columns: repeat(auto-fit, 90vw);
+        gap: 10px;
+        padding: 20px 0px;
+    }
+
+    .activePopUp {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .link {
+        display: none;
+    }
+}
+
+@media(min-width:481px) and (max-width:1024px) {
+    .videosContainer {
+        grid-template-columns: repeat(auto-fit, 230px);
+        gap: 10px;
+        padding: 15px 0px;
+    }
+
+    .activePopUp {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+}
+
+@media(min-width:1025px) {
+    .videosContainer {
+        grid-template-columns: repeat(auto-fit, 29vw);
+        gap: 20px;
+    }
+
+    .activePopUp {
+        width: 500px;
+        border-radius: 20px;
+    }
 }
 
 .cardVideo {
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 280px;
     background-color: #2f2f2f;
     overflow: hidden;
     border-radius: 15px;
+    color: white;
 }
 
 iframe {
