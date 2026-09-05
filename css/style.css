@@ -178,35 +178,4 @@ iframe {
 
     /* width:auto;
     height:560px; */
-}}
-.botao{
-    height: 10vh;
-    width: 150px;
-    display: flex;
-    align-items: center; 
-    
-}
-.botao button{
-   padding: 0 15px;
-    height: 40px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 20px;
-}
-.botao button:hover{
-    background-color: rgb(41, 41, 41);
-}
-.banner{
-    height: 90vh;
-    background-size: cover;
-    background-position: center 40%;;
-}
-.cardVideos{
-    height: 100px;
-}
-
-iframe{
-    /* width:auto;
-    height:560px; */
 }

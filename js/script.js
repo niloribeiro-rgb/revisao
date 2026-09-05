@@ -50,22 +50,3 @@ function adicionarVideo() {
         console.log("ola")
     }
 }
-    }
-    // alert(videoCode)
-    // alert(gettingCoode)
-
-
-    for (let i = 0; i < videoCode.length; i++) {
-        const cardVideo = document.createElement(`div`)
-        cardVideo.className = "cardVideo"
-        // tamanho do video 16/9
-
-        cardVideo.innerHTML += `<iframe width="480" height="270" src="https://www.youtube.com/embed/${videoCode[i]}?autoplay=1" allowfullscreen allow="autoplay" ></iframe>`
-        videos.appendChild(cardVideo.cloneNode(true))
-        console.log("ola")
-    }
-}
-
-    for (let i = 0; i < videoCode.length; i++)
-        videos.innerHTML += `<iframe width="560" height="320" src="https://www.youtube.com/embed/${videoCode[i]}?autoplay=1" allowfullscreen allow="autoplay" ></iframe>`
-}
