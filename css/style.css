@@ -224,6 +224,9 @@ header {
     .link {
         display: none;
     }
+    .popUpTop{
+        margin-top: 70px;
+    {
 }
 
 @media(min-width:481px) and (max-width:1024px) {
@@ -238,7 +241,9 @@ header {
         height: 100%;
         border-radius: 0px;
     }
-
+    .popUpTop{
+        margin-top: 70px;
+    {
 }
 
 @media(min-width:1025px) {
