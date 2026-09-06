@@ -225,8 +225,8 @@ header {
         display: none;
     }
     .popUpTop{
-        margin-top: 70px;
-    {
+      /*  margin-top: 70px; */
+    }
 }
 
 @media(min-width:481px) and (max-width:1024px) {
@@ -242,8 +242,8 @@ header {
         border-radius: 0px;
     }
     .popUpTop{
-        margin-top: 70px;
-    {
+      /*  margin-top: 70px; */
+    }
 }
 
 @media(min-width:1025px) {
@@ -261,7 +261,8 @@ header {
 .cardVideo {
     display: flex;
     flex-direction: column;
-    height: 280px;
+    justify-content: center;
+    align-items: center;
     background-color: #2f2f2f;
     overflow: hidden;
     border-radius: 15px;
