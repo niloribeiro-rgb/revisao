@@ -1,4 +1,4 @@
-const videos = document.querySelector(`.videosContainer`)
+const videos = document.querySelector(`#videosContainer`)
 
 function openClosePopUp() {
     const popUp = document.querySelector(`.popUpContainer`)
@@ -76,10 +76,42 @@ function adicionarVideo() {
 
     for (let i = 0; i < videoCode.length; i++) {
         const cardVideo = document.createElement(`div`)
-        cardVideo.className = "cardVideo"
+        cardVideo.className = "cards"
 
         cardVideo.innerHTML += `<iframe width="${videoWidth}" height="${videoHeight}" src="https://www.youtube.com/embed/${videoCode[i]}?autoplay=1" allowfullscreen allow="autoplay" ></iframe>`
         cardVideo.innerHTML += "<h2>Um traller</h2>"
         videos.appendChild(cardVideo.cloneNode(true))
+    }
+}
+
+const galeriaContainer = document.querySelector('.galeriaContainer')
+// eu tinha colocado \ em vez de /
+let persogensLinks = ["assets/forteJujutsu.png",
+    "assets/personagensDoJujutsu.png",
+    "assets/jujutsu1tp.png"]
+let monstrosLinks = ["assets/Mahoraga.jpg"]
+
+function todosGaleria() {
+   
+    galeriaContainer.innerHTML= ""
+    for(let i=0; i < persogensLinks.length; i++){
+        galeriaContainer.innerHTML += `<img src="${persogensLinks[i]}" alt="">`
+    }
+    for(let i=0; i < monstrosLinks.length; i++){
+        galeriaContainer.innerHTML += `<img src="${monstrosLinks[i]}" alt="">`
+    }
+}
+
+function personagensGaleria() {
+     galeriaContainer.innerHTML= ""
+    for(let i=0; i < persogensLinks.length; i++){
+        galeriaContainer.innerHTML += `<img src="${persogensLinks[i]}" alt="">`
+    }
+}
+
+function montrosGaleria() {
+     galeriaContainer.innerHTML= ""
+     for(let i=0; i < monstrosLinks.length; i++){
+        galeriaContainer.innerHTML += `<img src="${monstrosLinks[i]}" alt="">`
     }
 }
