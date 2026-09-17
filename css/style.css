@@ -139,11 +139,48 @@ header {
     width: 100px;
     height: 50px;
 }
-.form-group{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 10px;
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    gap: 10px;
+}
+
+.formContainer input {
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 170px;
+}
+
+.formContainer textarea {
+    max-width: 170px;
+    max-height: 100px;
+    min-width: 170px;
+    min-height: 100px;
+    padding: 7px;
+    border-radius: 5px;
+}
+.botaoForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.botaoForm button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 /* main */
@@ -327,6 +364,10 @@ iframe {
     border-radius: 20px;
     padding: 15px;
     color: black;
+}
+
+.buttonGaleria button:active{
+    background-color: rgb(231, 231, 231);
 }
 .galeriaContainer{
     display: grid;
