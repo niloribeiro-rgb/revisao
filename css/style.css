@@ -162,7 +162,7 @@ header {
     border-radius: 5px;
 }
 .botaoForm{
-    width: 100%;
+    width: 290px;
     display: flex;
     justify-content: center;
 }
@@ -367,7 +367,7 @@ iframe {
 }
 
 .buttonGaleria button:active{
-    background-color: rgb(170, 170, 170);
+     background-color: rgb(120, 120, 120);
 }
 .buttonGaleria button:hover {
     background-color: rgb(206, 206, 206);
